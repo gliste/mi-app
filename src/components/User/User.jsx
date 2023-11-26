@@ -1,9 +1,11 @@
 import './User.css'
+import { Link } from 'react-router-dom';
+
 const User = (props) => {
     return (
         <li className='user-item'>
             <div className='card user-item__content'>
-                <a href='#'>
+                <Link to={`/users/${props.Id}`}>
                     <div className='user-item__image avatar'>
                       <img src={props.Picture}/>
                     </div>
@@ -12,7 +14,7 @@ const User = (props) => {
                         <h3>{props.Title}</h3>
                         
                     </div>
-                </a>
+                </Link>
 
             </div>
 
